@@ -5,6 +5,9 @@
  */
 package GUI;
 
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+
 
 
 /**
@@ -20,6 +23,7 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
+        
        
     }
 
@@ -32,8 +36,43 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        vtaCliente = new javax.swing.JFrame();
+        txbRut = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        btnBuscar = new javax.swing.JButton();
         panelMenu = new javax.swing.JPanel();
         btnCliente = new javax.swing.JButton();
+
+        vtaCliente.setTitle("Clientes");
+        vtaCliente.setMinimumSize(new java.awt.Dimension(400, 300));
+
+        jLabel1.setText("Buscar por Rut");
+
+        btnBuscar.setText("Buscar");
+
+        javax.swing.GroupLayout vtaClienteLayout = new javax.swing.GroupLayout(vtaCliente.getContentPane());
+        vtaCliente.getContentPane().setLayout(vtaClienteLayout);
+        vtaClienteLayout.setHorizontalGroup(
+            vtaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(vtaClienteLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txbRut, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscar)
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        vtaClienteLayout.setVerticalGroup(
+            vtaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(vtaClienteLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(vtaClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txbRut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(btnBuscar))
+                .addContainerGap(242, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
@@ -60,22 +99,27 @@ public class Principal extends javax.swing.JFrame {
                 btnClienteMouseExited(evt);
             }
         });
+        btnCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMenuLayout.createSequentialGroup()
-                .addGap(124, 124, 124)
+                .addGap(88, 88, 88)
                 .addComponent(btnCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(552, Short.MAX_VALUE))
+                .addContainerGap(588, Short.MAX_VALUE))
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addGap(76, 76, 76)
                 .addComponent(btnCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(402, 402, 402))
+                .addContainerGap(421, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -99,6 +143,13 @@ btnCliente.setText("Clientes");
     private void btnClienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClienteMouseExited
         btnCliente.setText("");
     }//GEN-LAST:event_btnClienteMouseExited
+
+    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
+       
+        vtaCliente.setLocationRelativeTo(null);
+        vtaCliente.setVisible(true);
+       
+    }//GEN-LAST:event_btnClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,7 +187,11 @@ btnCliente.setText("Clientes");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCliente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelMenu;
+    private javax.swing.JTextField txbRut;
+    private javax.swing.JFrame vtaCliente;
     // End of variables declaration//GEN-END:variables
 }
